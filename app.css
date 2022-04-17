@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: hsl(233, 47%, 7%);
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.challenge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.challenge-container {
+  display: flex;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 8px;
+}
+.left {
+  padding: 60px 100px 60px 60px;
+}
+.heading {
+  max-width: 370px;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.heading-violet{
+  color: hsl(277, 64%, 61%);
+}
+.desc {
+  max-width: 330px;
+  margin-bottom: 60px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+.item-heading {
+  font-weight: 700;
+  font-size: 28px;
+  color: hsl(0, 0%, 100%);
+}
+.item-desc{
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+}
+.right{
+  position: relative;
+}
+.right::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 89%, 47%);
+  opacity: 0.5;
+}
+.attribution{
+  font-size: 18px;
+}
+@media screen and (max-width: 375px) {
+  .challenge-container{
+    flex-direction: column-reverse;
+  }
+  .heading{
+    margin-bottom: 10px;
+  }
+  .desc{
+    margin-bottom: 30px;
+  }
+  .left{
+    text-align: center;
+    padding: 30px;
+  }
+  .list{
+    flex-direction: column;
+    gap: 40px;
+  }
+  .attribution{
+    font-size: 12px;
+  }
+}
